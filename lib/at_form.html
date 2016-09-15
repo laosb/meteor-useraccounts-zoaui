@@ -1,6 +1,6 @@
 <template name="atForm">
   {{#unless hide}}
-    <form class="at-form">
+    <div class="at-form">
       {{#if showTitle}}
         {{> atTitle}}
       {{/if}}
@@ -34,6 +34,6 @@
       {{#if showResendVerificationEmailLink}}
         {{> atResendVerificationEmailLink}}
       {{/if}}
-  </form>
+  </div>
   {{/unless}}
 </template>
