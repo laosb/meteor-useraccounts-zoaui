@@ -1,6 +1,6 @@
 Package.describe({
-  summary: 'Accounts Templates unstyled.',
-  version: '1.14.2',
+  summary: 'Accounts Templates with ZoaUI.',
+  version: '1.0.0',
   name: 'zoa:useraccounts',
   git: 'https://github.com/laosb/meteor-useraccounts-zoaui.git',
 });
