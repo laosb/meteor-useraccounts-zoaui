@@ -5,11 +5,13 @@
 <template name="atTextInput">
   <div class="at-input {{#if isValidating}}validating{{/if}} {{#if hasError}}has-error{{/if}} {{#if hasSuccess}}has-success{{/if}} {{#if feedback}}has-feedback{{/if}}">
     {{#if showLabels}}
-      <label for="at-field-{{_id}}">
+      <label class="zo-label zo-label--hasContentBox">
         {{displayName}} {{#unless required}}{{optionalText}}{{/unless}}
+        <input class="zo-input zo-label__input zo-input--singleLine" type="{{type}}" id="at-field-{{_id}}" name="at-field-{{_id}}" placeholder="{{placeholder}}" autocapitalize="none" autocorrect="off">
       </label>
+    {{else}}
+      <input class="zo-input zo-input--singleLine" type="{{type}}" id="at-field-{{_id}}" name="at-field-{{_id}}" placeholder="{{placeholder}}" autocapitalize="none" autocorrect="off">
     {{/if}}
-    <input type="{{type}}" id="at-field-{{_id}}" name="at-field-{{_id}}" placeholder="{{placeholder}}" autocapitalize="none" autocorrect="off">
     {{#if hasIcon}}
         <span class="{{iconClass}}"></span>
     {{/if}}
@@ -21,19 +23,20 @@
 
 <template name="atCheckboxInput">
   <div class="at-input">
-      <input type="{{type}}" id="at-field-{{_id}}" name="at-field-{{_id}}" {{disabled}}>
-      <label for="at-field-{{_id}}">{{displayName}}</label>
+      <input class="zo-check" type="{{type}}" id="at-field-{{_id}}" name="at-field-{{_id}}" {{disabled}}>
+      <label class="zo-checkLabel" for="at-field-{{_id}}">{{displayName}}</label>
   </div>
 </template>
 
 <template name="atSelectInput">
   <div class="at-input">
-    <label for="at-field-{{_id}}">{{displayName}}</label>
-    <select id="at-field-{{_id}}" name="at-field-{{_id}}">
-      {{#each values}}
-        <option value="{{value}}">{{text}}</option>
-      {{/each}}
-    </select>
+    <label class="zo-label zo-label--hasSelect" for="at-field-{{_id}}">{{displayName}}
+      <select class="zo-select zo-label__select" id="at-field-{{_id}}" name="at-field-{{_id}}">
+        {{#each values}}
+          <option value="{{value}}">{{text}}</option>
+        {{/each}}
+      </select>
+    </label>
   </div>
 </template>
 

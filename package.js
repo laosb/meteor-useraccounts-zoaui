@@ -1,8 +1,8 @@
 Package.describe({
   summary: 'Accounts Templates unstyled.',
   version: '1.14.2',
-  name: 'useraccounts:unstyled',
-  git: 'https://github.com/meteor-useraccounts/unstyled.git',
+  name: 'zoa:useraccounts',
+  git: 'https://github.com/laosb/meteor-useraccounts-zoaui.git',
 });
 
 Package.on_use(function(api, where) {
