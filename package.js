@@ -66,20 +66,3 @@ Package.on_use(function(api, where) {
     'lib/at_unstyled.css'
   ], ['client']);
 });
-
-Package.on_test(function(api) {
-  api.use([
-    'useraccounts:unstyled',
-    'useraccounts:core@1.14.2',
-  ]);
-
-  api.use([
-    'accounts-password',
-    'tinytest',
-    'test-helpers'
-  ], ['client', 'server']);
-
-  api.add_files([
-    'tests/tests.js'
-  ], ['client', 'server']);
-});
